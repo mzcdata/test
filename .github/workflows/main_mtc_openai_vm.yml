@@ -47,4 +47,5 @@ jobs:
           port: ${{ secrets.AZURE_VM_PORT }}
           script: |
             whoami
+            cd fastapi
             ls -al
