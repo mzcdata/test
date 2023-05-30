@@ -46,8 +46,10 @@ jobs:
           password: ${{ secrets.AZURE_VM_PASSWORD }}
           port: ${{ secrets.AZURE_VM_PORT }}
           script: |
-            whoami
             cd ~/fastapi
             cd ./mtc-azure-openai-back
             git pull origin main
+            source ./venv/bin/activate
+            pip install -r requirements.txt
             ls -al
+            systemctl restart openai.service
