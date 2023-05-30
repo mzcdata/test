@@ -28,7 +28,7 @@ app.add_middleware(
 
 @app.middleware("http")
 async def errors_handling(request: Request, call_next):
-    """Common Error Middleware"""
+    """Common Error Middleware test"""
     try:
         return await call_next(request)
     except AzureError as azure_exc:

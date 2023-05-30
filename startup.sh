@@ -10,4 +10,6 @@
 
 echo Start Server
 python -m uvicorn api:app --host 0.0.0.0 --app-dir source --log-config log.ini
+
+
 # python -m uvicorn api:app --host 0.0.0.0 --app-dir source --reload
