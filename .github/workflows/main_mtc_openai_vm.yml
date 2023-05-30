@@ -52,4 +52,4 @@ jobs:
             source ./venv/bin/activate
             pip install -r requirements.txt
             ls -al
-            systemctl restart openai.service
+            sudo systemctl restart openai.service
