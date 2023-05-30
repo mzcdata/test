@@ -50,6 +50,7 @@ jobs:
             cd ./mtc-azure-openai-back
             git pull origin main
             source ./venv/bin/activate
+            pip install --upgrade pip
             pip install -r requirements.txt
             ls -al
             sudo systemctl restart openai.service
