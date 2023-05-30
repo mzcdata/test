@@ -39,12 +39,12 @@ jobs:
 
     steps:
       - name: multiple command
-	    uses: appleboy/ssh-action@v0.1.10
-	    with:
-		  host: ${{ secrets.HOST }}
-		  username: ${{ secrets.USERNAME }}
-		  password: ${{ secrets.PASSWORD }}
-		  port: ${{ secrets.PORT }}
-		  script: |
-		    whoami
-		    ls -al
+	    - uses: appleboy/ssh-action@v0.1.10
+	    - with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            whoami
+            ls -al
