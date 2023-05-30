@@ -52,5 +52,5 @@ jobs:
             source ./venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
-            ls -al
             sudo systemctl restart openai.service
+            systemctl status openai.service
